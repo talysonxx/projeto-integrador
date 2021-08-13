@@ -1,6 +1,7 @@
 let map;
 
 function initMap() {
+    // inicar mapa
     map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: -3.8168435203245368, lng: -49.66447686294523},
         /*
@@ -28,23 +29,34 @@ function initMap() {
         }
     )
 
-    // marker
-    new google.maps.Marker({
-        position: {lat: -3.819345274440888, lng: -49.66367311377041},
-        map,
-        title: 'Hello word!',
-    })
-
     // marcar
-    autocomplete.addEventListener('place_changed', () => {
-        window.alert('lugar mudou')
-        // const place = autocomplete.getPlace()
-        // new google.maps.Marker(
-        //     {
-        //         position: place.geometry.location,
-        //         title: place.name,
-        //         map: map,
-        //     }
-        // )
-    })
+    // autocomplete.addEventListener('place_changed', () => {
+    //     const place = autocomplete.getPlace()
+    //     new google.maps.Marker(
+    //         {
+    //             position: place.geometry.location,
+    //             title: place.name,
+    //             map: map,
+    //         }
+    //     )
+    // })
+
+    // marker
+    const lugares = [
+        {
+            lat: -3.819345274440888,
+            lng: -49.66367311377041,
+            title: 'Hello World!'
+            
+        }
+    ]
+    const image = 'https://cdn.discordapp.com/attachments/799379659347066922/875823943372664902/image-100px.jpg'
+    new google.maps.Marker(
+        {
+            position: lugares[0],
+            map,
+            title: lugares[0].title,
+            icon: image
+        }
+    )
 }
