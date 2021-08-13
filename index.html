@@ -7,10 +7,12 @@
     <script src="scripts/index.js"></script>
   </head>
   <body>
+    <input type="text" placeholder="Digite um local" id="lugar">
+
     <div id="map"></div>
 
     <script defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwbj4fmqpd2E678L4HM6xD_pbT9qcp_hc&callback=initMap&libraries=&v=weekly&language=pt-BR&region=BR"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwbj4fmqpd2E678L4HM6xD_pbT9qcp_hc&libraries=places&callback=initMap&v=weekly&language=pt-BR&region=BR"
       async
     ></script>
   </body>
