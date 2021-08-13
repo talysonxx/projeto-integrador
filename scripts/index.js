@@ -17,6 +17,9 @@ function initMap() {
     });
 
 
+
+
+
     // autocompletar
     let lugar = document.getElementById('lugar')
     let autocomplete
@@ -29,7 +32,10 @@ function initMap() {
         }
     )
 
-    // marcar
+
+
+
+    // marcar (tentativa)
     // autocomplete.addEventListener('place_changed', () => {
     //     const place = autocomplete.getPlace()
     //     new google.maps.Marker(
@@ -41,6 +47,9 @@ function initMap() {
     //     )
     // })
 
+
+    
+
     // marker
     const lugares = [
         {
@@ -48,15 +57,22 @@ function initMap() {
             lng: -49.66367311377041,
             title: 'Hello World!'
             
+        },
+        {
+            lat: -4.241608,
+            lng: -49.961771,
+            title: "Novo Repartimento"
         }
     ]
     const image = 'https://cdn.discordapp.com/attachments/799379659347066922/875823943372664902/image-100px.jpg'
-    new google.maps.Marker(
-        {
-            position: lugares[0],
-            map,
-            title: lugares[0].title,
-            icon: image
-        }
-    )
+    lugares.forEach(lugar => {
+        new google.maps.Marker(
+            {
+                position: lugar,
+                map,
+                title: lugar.title,
+                icon: image
+            }
+        )
+    })
 }
