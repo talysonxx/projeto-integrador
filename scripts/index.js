@@ -1,8 +1,8 @@
-let map;
+let map
 
+// inicar mapa
 function initMap() {
-    // inicar mapa
-    map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -3.8168435203245368, lng: -49.66447686294523},
         /*
             níveis de zoom:
@@ -13,8 +13,8 @@ function initMap() {
             20: Edifícios
         */
         zoom: 15,
-        title: 'Tucuruí - PA',
-    });
+        title: 'Tucuruí - PA'
+    })
 
 
 
@@ -55,13 +55,18 @@ function initMap() {
         {
             lat: -3.819345274440888,
             lng: -49.66367311377041,
-            title: 'Hello World!'
+            title: 'Novo IFPA'
             
         },
         {
             lat: -4.241608,
             lng: -49.961771,
             title: "Novo Repartimento"
+        },
+        {
+            lat: -3.831480315169525,
+            lng: -49.676627024159885,
+            title: 'Vila Permanente'
         }
     ]
     const image = 'https://cdn.discordapp.com/attachments/799379659347066922/875823943372664902/image-100px.jpg'
